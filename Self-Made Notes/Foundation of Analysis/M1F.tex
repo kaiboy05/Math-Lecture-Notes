@@ -409,12 +409,18 @@ Let $I = \R$.
 If $i \in I$, and let $X_i = \{i\}$.
 What is $\bigcup_{i \in I} X_i$?
 $$\bigcup_{i \in I} X_i = \{a \in \R \mid \exists i \in I, a \in X_i\}$$
-$$\therefore \bigcup_{i \in I} X_i \subseteq \R$$
+\[
+	\therefore \bigcup_{i \in I} X_i \subseteq \R \tag{1}
+\]
 Let $a \in \R$,
 \[
 	a \in X_a = \{a\} \tag{by definition}
 \]
 $\therefore \exists i \in I = \R$ such that $a \in X_i = \{i\}$ when $i = a$.
+\[
+	\therefore \R \subseteq \bigcup_{i \in I} X_i \tag{2}
+\]
+$$\bigcup_{i \in I} X_i = \R$$
 \end{eg}
 
 \subsubsection{Intersection}
@@ -468,7 +474,7 @@ If $X, Y \subseteq \Omega$, $$(X \cup Y = \Omega) \land (X \cap Y = \varnothing)
 \end{thm}
 \begin{proof}
 Let $a \in \Omega$,
-$P$ be proposition $a \in X$ and $Q$ be proposition $a \in Y$,
+$P$ be proposition $a \in X$, $Q$ be proposition $a \in Y$,
 \begin{align*}
 	&&a \in X \cup Y &\iff (a \in X) \lor (a \in Y) \tag{Union definition}\\
 	&\therefore &a \in X \cup Y &\iff P \lor Q\\
@@ -489,8 +495,46 @@ $P$ be proposition $a \in X$ and $Q$ be proposition $a \in Y$,
 \end{align*}
 $$(X \cup Y = \Omega) \land (X \cap Y = \varnothing) \implies X = Y^c$$
 \end{proof}
+Let $S = \{a \in \R \mid a > 0\}$
+\begin{prop}[$S$ has a smallest element]
+$$P := \exists s \in S, \forall t \in S, s \leq t$$
+\end{prop}
+\begin{proof}
+Consider $\neg P$,
+$$\neg P = \forall s \in S, \exists t \in S, s > t$$
+Let $s \in S$,\\
+$\frac{s}{2}$ will also be a real number, and it is smaller than $s$.\\
+$\therefore \neg P$ is true, and so $P$ is a false proposition.\\
+Hence, $S$ does not have a smallest statement.
+\end{proof}
 
-\subsection{More about sets}
+\subsection{Some Proof Examples}
+\begin{nlemma}\label{square_int_even}
+If $x$ is an integer, and $x^2$ is even, then $x$ is even.
+\end{nlemma}
+\begin{proof}
+Assume $x$ is an integer and $x^2$ is even.\\
+Assume for contradiction that x is odd.\\
+Then, $x = 2t + 1$, so $x^2 = 4t^2 + 4t + 1$.\\
+$x^2 = 2(2t^2 + 2t) + 1$, which is an odd number.\\
+However, we assumed that $x^2$ is even at the beginning, so contradiction occurs. (\contradiction)\\
+Hence, the assumption that x is odd must be wrong, so $x$ should be even.
+\end{proof}
+
+\begin{nlemma}
+$\sqrt{2}$ is irrational.
+\end{nlemma}
+\begin{proof}
+Assume for a conntradiction that $\sqrt{2}$ is rational.\\
+Write $\sqrt{2} = \frac{a}{b}$, with $a,b \in \Z_{\geq1}$, and at least one of them is odd.\\
+By squaring both sides, we can deduce$$2 = \frac{a^2}{b^2}$$
+$$2b^2 = a^2$$
+It shows that $a^2$ is an even number. By $~\cref{square_int_even}$
+
+\end{proof}
+
+
+
 
 
 
