@@ -1,0 +1,520 @@
+\documentclass[a4paper]{article}
+
+\def\npart {Year 1}
+\def\nterm {First Term}
+\def\nyear {2018}
+\def\nlecturer {Kevin Buzzard}
+\def\ncourse {Foundation of Analysis}
+
+\input{header}
+
+\begin{document}
+
+\maketitle
+{\small
+  \noindent\textbf{M1F}\\
+}
+
+\tableofcontents
+
+\setcounter{section}{-1}
+
+\section{Introduction}
+In this course...
+
+\section{Propositions, Sets and Numbers}
+The propositions are like easy logic, and then a few sets and number concept will be discussed.
+
+\subsection{Propositions}
+\begin{defi}[Proposition]
+	A \emph{proposition} is a \textbf{True} or \textbf{False} statement.
+\end{defi}
+
+\begin{eg}\leavevmode
+	\begin{itemize}
+		\item $2 + 2 = 4$
+		\item $2 + 2 = 100000000$
+		\item Fermat's Last Theorm
+		\item Riemann Hypothesis
+	\end{itemize}
+\end{eg}
+
+There are some propositions that we don't know they are true or false, like Riemann hypothesis. However, in \emph{classical mathematics}, mathematics of M1F, \textbf{every} proposition is either true or not. We are just not sure about some of them.
+
+There are also some examples of things which are \textbf{not} propositions:
+
+\begin{eg}\leavevmode
+	\begin{itemize}
+		\item $2 + 2$
+		\item $2 = 2 = 4$
+	\end{itemize}
+	The first example is a number, but not proposition. It is not 'true' or 'false', it is 4.
+	The second example doesn't even make sense. It is not a mathematical object.
+\end{eg}
+
+\subsection{Notation of proposition}
+There are few connectives between propositions, they are \textbf{and}, \textbf{or}, \textbf{not}, \textbf{implies}, \textbf{if and only if}
+
+\begin{defi}[And]
+If $P$ and $Q$ are propositions, "$P$ \emph{and} $Q$" is a proposition and can be written as $P \land Q$. $P \land Q$ are true when \emph{both} $P$ and $Q$ are true.
+\end{defi}
+
+We can see the relation of $P \land Q$, $P$, and $Q$ by the truth table.
+
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		$P$ & $Q$ & $P \land Q$\\
+		\hline
+		$T$ & $T$ & $T$\\
+		\hline
+		$T$ & $F$ & $F$\\
+		\hline
+		$F$ & $T$ & $F$\\
+		\hline
+		$F$ & $F$ & $F$\\
+		\hline
+	\end{tabular}
+\end{center}
+
+\begin{eg}
+$(2 + 2 = 4) \land (2 + 2 = 5)$ is false, since $2 + 2 = 5$ is false.
+\end{eg}
+
+\begin{defi}[Or]
+If $P$ and $Q$ are propositions, "$P$ \emph{or} $Q$" is a proposition and can be written as $P \lor Q$. $P \lor Q$ are true when \emph{either} $P$, $Q$ or \emph{both} are true.
+\end{defi}
+
+We can see the relation of $P \lor Q$, $P$, and $Q$ by the truth table.
+
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		$P$ & $Q$ & $P \lor Q$\\
+		\hline
+		$T$ & $T$ & $T$\\
+		\hline
+		$T$ & $F$ & $T$\\
+		\hline
+		$F$ & $T$ & $T$\\
+		\hline
+		$F$ & $F$ & $F$\\
+		\hline
+	\end{tabular}
+\end{center}
+
+\begin{eg}
+$(2 + 2 = 4) \lor (2 + 2 = 5)$ is false, since $2 + 2 = 4$ is true.
+\end{eg}
+
+\begin{defi}[Not]
+If $P$ is proposition, "not $P$" is a proposition and can be written as $\neg P$. $\neg P$ is the proposition which is "the opposite of $P$". If $P$ is true then $\neg P$ is false, and if $P$ is false then $\neg P$ is true.
+\end{defi}
+
+We can see the relation of $\neg P$ and $P$ by the truth table.
+
+\begin{center}
+	\begin{tabular}{|c|c|}
+		\hline
+		$P$ & $\neg P$\\
+		\hline
+		$T$ & $F$\\
+		\hline
+		$F$ & $T$\\
+		\hline
+	\end{tabular}
+\end{center}
+
+\begin{eg}
+Let $P$ be the Riemann hypothesis, then $P \lor \neg P$ is true, because in classical mathematics, the Riemann hypothesis is either true or false.
+\end{eg}
+
+\begin{defi}[Implies]
+If $P$ and $Q$ are propositions, "$P$ \emph{implies} $Q$" is a proposition and can be written as $P \implies Q$. $P \implies Q$ means if $P$ is true, then $Q$ is true as well.
+\end{defi}
+
+We can see the relation of $P \implies Q$, $P$, and $Q$ by the truth table.
+
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		$P$ & $Q$ & $P \implies Q$\\
+		\hline
+		$T$ & $T$ & $T$\\
+		\hline
+		$T$ & $F$ & $F$\\
+		\hline
+		$F$ & $T$ & $T$\\
+		\hline
+		$F$ & $F$ & $T$\\
+		\hline
+	\end{tabular}
+\end{center}
+
+The only time that $P \implies Q$ is false is when $P$ is true and $Q$ is false.
+
+\begin{eg}
+$(2 + 2 = 4) \implies (2 + 2 = 5)$ is false, but $(2 + 2 = 5) \implies (2 + 2 = 4)$ is true.
+\end{eg}
+
+\begin{notation}
+$Q \Longleftarrow P$ is defined to be $P \implies Q$.
+\end{notation}
+
+\begin{defi}[if and only if]
+If $P$ and $Q$ are propositions, "$P$ \emph{if and only if} $Q$" is a proposition and can be written as $P \iff Q$. $P \iff Q$ is true when $P$ and $Q$ have the \emph{same} truth value.
+\end{defi}
+
+We can see the relation of $P \implies Q$, $P$, and $Q$ by the truth table.
+
+\begin{center}
+	\begin{tabular}{|c|c|c|}
+		\hline
+		$P$ & $Q$ & $P \iff Q$\\
+		\hline
+		$T$ & $T$ & $T$\\
+		\hline
+		$T$ & $F$ & $F$\\
+		\hline
+		$F$ & $T$ & $F$\\
+		\hline
+		$F$ & $F$ & $T$\\
+		\hline
+	\end{tabular}
+\end{center}
+
+$\iff$ is the proposition version of $=$ for numbers. If $x$ and $y$ are equal numbers, we write $x = y$, but if $P$ and $Q$ are propositions with the same truth value, we write $P \iff Q$.
+
+\begin{eg}\leavevmode
+	\begin{itemize}
+		\item $(P \implies Q) \iff (Q \Longleftarrow P)$ is always true.
+		\item $P \iff (\neg P)$ is always false.
+	\end{itemize}
+\end{eg}
+
+\subsection{Theorm of propositions}
+\begin{thm}[Relation of \emph{not, in} and \emph{or}]
+Let $P$ and $Q$ be propositions,
+$$(\lnot P) \lor (\lnot Q) \iff \lnot(P \land Q)$$
+\end{thm}
+\begin{proof}
+Consider the truth table,
+\begin{center}
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		$P$ & $Q$ & $(\lnot P) \lor (\lnot Q)$ & $\lnot(P \land Q)$\\
+		\hline
+		$T$ & $T$ & $F \lor F \iff F$ & $\lnot(T) \iff F$\\
+		\hline
+		$T$ & $F$ & $F \lor T \iff T$ & $\lnot(F) \iff T$\\
+		\hline
+		$F$ & $T$ & $T \lor F \iff T$ & $\lnot(F) \iff T$\\
+		\hline
+		$F$ & $F$ & $T \lor T \iff T$ & $\lnot(F) \iff T$\\
+		\hline
+	\end{tabular}
+\end{center}
+We can see that the truth values of proposition $(\lnot P) \lor (\lnot Q)$ and $\lnot(P \land Q)$ are always the same.
+$$\therefore (\lnot P) \lor (\lnot Q) \iff \lnot(P \land Q)$$
+\end{proof}
+
+\subsection{Sets}
+\begin{defi}[Set]
+	A \emph{set} is a collection of stuff. The things in a set $X$ are called the \emph{elements} of $X$.
+\end{defi}
+Note that there is a more rigorous definition of a set. The more rigorous one depends on which axiomatic foundation using for mathematics. If set theory is the foundation, the definition of a set will be "\textbf{Everything is a set.}".
+
+\subsection{Basic notation for sets.}
+
+\begin{notation}
+We use $\{$ and $\}$ to denote sets.
+\end{notation}
+
+\begin{eg}\leavevmode
+	\begin{itemize}
+		\item $\{1, 2, 3\}$ is a set.
+		\item $\{$ me, you, the desk in my office $\}$ is a set.
+		\item $\{\}$ is a set. It exists, but it has no elements.
+		\item $\{1, 2, 3, 2\}$ is a set.
+		\item $\{1, 2, 3, 4, 5, ...\}$ is a set, and it is an infinite set.
+	\end{itemize}
+\end{eg}
+
+We use the symbol $\in$ to denote set membership. If $a$ is a thing (e.g. a number) and $X$ is a set, then $a \in X$ is a proposition. The proposition $a \in X$ is true exactly when $a$ is in set $X$.
+
+\begin{eg}\leavevmode
+	\begin{itemize}
+		\item $2 \in \{ 1, 2, 3 \}$. This means $2$ is an element of set $\{ 1, 2, 3 \}$.
+		\item $x \in \{ \}$ makes mathematical sense, but it is a false statement.
+	\end{itemize}
+\end{eg}
+
+\begin{notation}
+$\{ \}$ has no elements, which is called the \emph{empty set}. We use $\varnothing$ to notate an empty set.
+\end{notation}
+
+\subsection{Fundamental fact about equality of sets}
+
+\begin{defi}[Equality of sets]
+\[
+	X = Y \iff (\forall a \in \Omega, a \in X \iff a \in Y)
+\]
+It means two sets are equal if and only if they have the same elements.
+\end{defi}
+
+\begin{eg}
+$\{ 1, 2, 3 \}$ and $\{ 1, 2, 3, 2 \}$ are equal.
+\end{eg}
+
+Fundamental fact above is the rule for sets. If we need to count things, we can use other things, like multisets, lists, or sequences, instead of sets.
+
+\subsection{Notation of sets}
+
+\subsubsection{Subsets}
+\begin{notation}
+We use $\subseteq$ to denote subsets. $X \subseteq Y$ is a proposition saying that $X$ is a subset of $Y$.
+\end{notation}
+
+\begin{defi}[Subset]
+\[
+	X \subseteq Y \iff (\forall a \in \Omega, a \in X \implies a \in Y)
+\]
+It means X is a subset of Y when every elements of X is also an element of Y.
+\end{defi}
+
+\begin{eg}\leavevmode
+	\begin{itemize}
+		\item $\{ 1, 2 \} \subseteq \{ 1, 2, 3 \}$, since elements of set $\{ 1, 2\}$, $1$ and $2$ are both inthe set $\{ 1, 2, 3 \}$.
+		\item If $a$ is my left shoe, $b$ is my right hand, and $c$ is my mother, then $\{ a, b \} \subseteq \{ a, b, c \}$
+	\end{itemize}
+\end{eg}
+
+\begin{notation}
+$X \supseteq Y$ means $X \subseteq Y$.
+\end{notation}
+
+\begin{thm}[Equality and subsets]
+If $X$ and $Y$ are sets, then
+\[
+	X = Y \iff (X \subseteq Y \land Y \subseteq X)
+\]
+\end{thm}
+
+\begin{proof}
+From $X \subseteq Y$, we can deduce 
+\[
+	a \in X \implies a \in Y \tag{1}
+\]
+And from $Y \subseteq X$, we can deduce
+\[
+	a \in Y \implies a \in X \tag{2}
+\]
+From (1) and (2), we can deduce that $$a \in Y \iff a \in X$$which is definition of $X = Y$
+\[
+	\therefore (X \subseteq Y \land Y \subseteq X) \implies X = Y \tag{a}
+\]
+Similarly, From $X = Y$, we can deduce
+\[
+	a \in Y \iff a \in X
+\]
+And it is equivalent to
+\begin{align*}
+	a \in Y &\implies a \in X\\
+	a \in X &\implies a \in Y
+\end{align*}
+which are definition of $Y \subseteq X$ and $X \subseteq Y$.
+\[
+	\therefore X = Y \implies (X \subseteq Y \land Y \subseteq X) \tag{b}
+\]
+With (a) and (b), we can conclude that,
+\[
+	X = Y \iff (X \subseteq Y \land Y \subseteq X)
+\]
+\end{proof}
+
+\subsection{Important sets}
+\begin{eg}\leavevmode
+	\begin{itemize}
+		\item $\Z$ Integers
+		\item $\Q$ Rational numbers
+		\item $\R$ Real numbers
+		\item $\C$ Complex numbers
+	\end{itemize}
+\end{eg}
+
+\begin{defi}[Integers $\Z$]
+$$\Z = \{ ..., -3, -2, -1, 0, 1, 2, 3, ...\}$$
+\end{defi}
+There is a problem of unconsistent of natural numbers $\N$. Someone defined it as $$\N = \{ 0, 1, 2, 3, ...\}$$Someone defined it as $$\N = \{ 1, 2, 3, ...\}$$
+In M1F, we will not use $\N$. Instead, we will use the following notations.
+\begin{notation}
+$$\Z _{\geq 0} = \{ 0, 1, 2, 3, ...\}$$
+$$\Z _{\geq 1} = \{ 1, 2, 3, ...\}$$
+\end{notation}
+
+For set $\R$, there are some special notations.
+\begin{notation}
+Let $a$ and $b$ be real numbers,
+$$[a,b] = \{x \in \R \mid a \leq x \land x \leq b\}$$
+$$(a,b) = \{x \in \R \mid a < x \land x < b\}$$
+$$[a,\infty) = \{x \in \R \mid a \leq x\}$$
+\end{notation}
+
+\subsubsection{Universes}
+\begin{notation}
+We use \emph{universe} $\Omega$ to denote the set consisting of all the stuff we are interested in.
+\end{notation}
+\emph{Universe} means the set we are considering. For example, $\Omega$ could be a set of real numbers, or complex numbers. It depends on what we are considering.
+
+\subsubsection{For all}
+\begin{notation}
+We use $\forall$ to say for all in mathematics.
+\end{notation}
+
+\begin{eg}
+$\forall a \in \Z, 2a$ is even.\\
+This means ``For all integers $a$, $2a$ is an even number''.
+\end{eg}
+
+\subsubsection{There exists}
+\begin{notation}
+We use $\exists$ to say there exists inn mathematics.
+\end{notation}
+
+\begin{eg}
+$\exists a \in \Z, a$ is even.\\
+This means ``There exists an integer $a$, which is an even number''.
+\end{eg}
+
+\subsubsection{Union}
+\begin{defi}[Unions]
+\[
+	\forall a \in \Omega, a \in X \cup Y \iff a \in X \lor a \in Y
+\]
+It means the \emph{union} of $X$ and $Y$, $X \cup Y$ is all the stuff in either $X$, \emph{or} $Y$, \emph{or both}.
+\end{defi}
+\begin{eg}
+Let $X = \{ 1, 2, 3 \}$ and $Y= \{ 3, 4, 5 \}$,\\
+then $X \cup Y = \{ 1, 2, 3, 4, 5 \}$.
+\end{eg}
+We have some notations for intersection of large numbers of sets.\\
+Let us define $I = \Z_{\geq1} = \{1,2,3,...\}$. For every $i \in I$, we have a set of real numbers $X_i \subseteq \R$.
+\begin{notation}
+$$\bigcup^\infty_{i=1} X_i = \{a \in \Omega \mid \exists i \in \Z_{\geq1}, a \in X_i\}$$
+$$\bigcup_{i \in I} X_i = \{a \in \Omega \mid \exists i \in I, a \in X_i\}$$
+\end{notation}
+
+\begin{eg}
+Let $I = \R$.
+If $i \in I$, and let $X_i = \{i\}$.
+What is $\bigcup_{i \in I} X_i$?
+$$\bigcup_{i \in I} X_i = \{a \in \R \mid \exists i \in I, a \in X_i\}$$
+$$\therefore \bigcup_{i \in I} X_i \subseteq \R$$
+Let $a \in \R$,
+\[
+	a \in X_a = \{a\} \tag{by definition}
+\]
+$\therefore \exists i \in I = \R$ such that $a \in X_i = \{i\}$ when $i = a$.
+\end{eg}
+
+\subsubsection{Intersection}
+\begin{defi}[Intersection]
+\[
+	\forall a \in \Omega, a \in X \cap Y \iff a \in X \land a \in Y
+\]
+It means the \emph{intersection} of $X$ and $Y$, $X \cap Y$ is all the stuff in \emph{both} $X$, \emph{and} $Y$.
+\end{defi}
+\begin{eg}
+Let $X = \{ 1, 2, 3 \}$ and $Y= \{ 3, 4, 5 \}$,\\
+then $X \cap Y = \{ 3 \}$.
+\end{eg}
+We have some notations for intersection of large numbers of sets.\\
+Let us define $I = \Z_{\geq1} = \{1,2,3,...\}$. For every $i \in I$, we have a set of real numbers $X_i \subseteq \R$.
+\begin{notation}
+$$\bigcap^\infty_{i=1} X_i = \{a \in \Omega \mid \forall i \in \Z_{\geq1}, a \in X_i\}$$
+$$\bigcap_{i \in I} X_i = \{a \in \Omega \mid \forall i \in I, a \in X_i\}$$
+\end{notation}
+
+\begin{eg}
+What is $\bigcap_{i=1}^\infty X_i$, where $X_i = [-i, i]$?\\
+$\because X_1 \subseteq X_2 \subseteq X_3 \subseteq ...$, real numbers in all the $X_i$ are the real numbers in $X_1$.\\
+$\therefore \bigcap_{i=1}^\infty X_i = X_1$
+\end{eg}
+
+
+\subsubsection{Complements}
+\begin{defi}[Complements]
+\[
+	\forall a \in \Omega, a \in X^c \iff \lnot(a \in X)
+\]
+It means if $X$ is a subset of $\Omega$, then its \emph{complement} $X^c$ is the set whose elements are all the things in $\Omega$ which are not in $X$.
+\end{defi}
+\begin{eg}
+If our universe $\Omega$ is $\Z$, the integers, and if $X$ is the set of even integers, then its \emph{complement} $X^c$ is the set of odd numbers.
+\end{eg}
+\begin{notation}
+$a \notin X$ is defined to be $\lnot(a \in X)$, since $a$ is not an element of $X$ is also a proposition.
+\end{notation}
+
+\subsection{Notation of sets with certain property}
+Let $X$ be the set of \emph{integers}, and we want to consider the subset of $X$ consisting of positive integers. We can write the subset as: 
+$$\{ a \in X \mid a > 0\}$$
+The line in the middle is pronounced ``'such that". So the full statement can be read as ``the elements $a$ of $X$ such that $a > 0$".
+
+\subsection{Theorm of sets}
+\begin{thm}[A theorm of complement]
+Let $X$ and $Y$ be sets.\\
+If $X, Y \subseteq \Omega$, $$(X \cup Y = \Omega) \land (X \cap Y = \varnothing) \implies X = Y^c$$
+\end{thm}
+\begin{proof}
+Let $a \in \Omega$,
+$P$ be proposition $a \in X$ and $Q$ be proposition $a \in Y$,
+\begin{align*}
+	&&a \in X \cup Y &\iff (a \in X) \lor (a \in Y) \tag{Union definition}\\
+	&\therefore &a \in X \cup Y &\iff P \lor Q\\
+	&\because &X \cup Y = \Omega \\
+	&\therefore &a \in X \cup Y &\iff \top\\
+	&&P \lor Q &\iff \top\\
+	&&a \in X \cap Y &\iff (a \in X) \land (a \in Y) \tag{Intersection definition}\\
+	&\therefore &a \in X \cup Y &\iff P \land Q\\
+	&\because &X \cup Y = \varnothing\\
+	&\therefore &a \in X \cup Y &\iff \bot\\
+	&&P \land Q &\iff \bot\\
+	&&\lnot (P \land Q) &\iff \top\\
+	&\therefore &P \lor Q &\iff \lnot (P \land Q)\\
+	&\therefore &P &\iff \lnot Q\\
+	&& a \in X &\iff \lnot(a \in Y)\\
+	&& a \in X &\iff a \in Y^c \tag{Complement definition}\\
+	&\therefore &X &= Y^c
+\end{align*}
+$$(X \cup Y = \Omega) \land (X \cap Y = \varnothing) \implies X = Y^c$$
+\end{proof}
+
+\subsection{More about sets}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

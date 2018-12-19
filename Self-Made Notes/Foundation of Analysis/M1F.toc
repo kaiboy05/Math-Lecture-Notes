@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {0}Introduction}{3}{section.0}
+\contentsline {section}{\numberline {1}Propositions, Sets and Numbers}{4}{section.1}
+\contentsline {subsection}{\numberline {1.1}Propositions}{4}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Notation of proposition}{4}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Theorm of propositions}{6}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Sets}{6}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Basic notation for sets.}{6}{subsection.1.5}
+\contentsline {subsection}{\numberline {1.6}Fundamental fact about equality of sets}{7}{subsection.1.6}
+\contentsline {subsection}{\numberline {1.7}Notation of sets}{7}{subsection.1.7}
+\contentsline {subsubsection}{\numberline {1.7.1}Subsets}{7}{subsubsection.1.7.1}
+\contentsline {subsection}{\numberline {1.8}Important sets}{8}{subsection.1.8}
+\contentsline {subsubsection}{\numberline {1.8.1}Universes}{9}{subsubsection.1.8.1}
+\contentsline {subsubsection}{\numberline {1.8.2}For all}{9}{subsubsection.1.8.2}
+\contentsline {subsubsection}{\numberline {1.8.3}There exists}{9}{subsubsection.1.8.3}
+\contentsline {subsubsection}{\numberline {1.8.4}Union}{9}{subsubsection.1.8.4}
+\contentsline {subsubsection}{\numberline {1.8.5}Intersection}{10}{subsubsection.1.8.5}
+\contentsline {subsubsection}{\numberline {1.8.6}Complements}{10}{subsubsection.1.8.6}
+\contentsline {subsection}{\numberline {1.9}Notation of sets with certain property}{11}{subsection.1.9}
+\contentsline {subsection}{\numberline {1.10}Theorm of sets}{11}{subsection.1.10}
+\contentsline {subsection}{\numberline {1.11}More about sets}{11}{subsection.1.11}
