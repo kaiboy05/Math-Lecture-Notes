@@ -529,8 +529,13 @@ Assume for a conntradiction that $\sqrt{2}$ is rational.\\
 Write $\sqrt{2} = \frac{a}{b}$, with $a,b \in \Z_{\geq1}$, and at least one of them is odd.\\
 By squaring both sides, we can deduce$$2 = \frac{a^2}{b^2}$$
 $$2b^2 = a^2$$
-It shows that $a^2$ is an even number. By $~\cref{square_int_even}$
-
+It shows that $a^2$ is an even number. By Lemma~\ref{square_int_even}, $a$ will be even.\\
+Write $a = 2c$, with $c \in \Z_{\geq1}$, we can deduce$$2b^2 = (2c)^2$$
+$$2b^2 = 4c^2$$
+$$b^2 = 2c^2$$
+Similarly, by Lemma~\ref{square_int_even}, $b$ will be even.\\
+However, we assumed that one of $a,b$ is odd, so contradiction occurs.(\contradiction)\\
+Hence, the assumption that $\sqrt{2}$ is rational is wrong, so $\sqrt{2}$ is irrational.
 \end{proof}
 
 
