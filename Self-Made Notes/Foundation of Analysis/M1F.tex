@@ -521,7 +521,7 @@ However, we assumed that $x^2$ is even at the beginning, so contradiction occurs
 Hence, the assumption that x is odd must be wrong, so $x$ should be even.
 \end{proof}
 
-\begin{nlemma}
+\begin{nlemma}\label{sqrt2_irr}
 $\sqrt{2}$ is irrational.
 \end{nlemma}
 \begin{proof}
@@ -537,6 +537,41 @@ Similarly, by Lemma~\ref{square_int_even}, $b$ will be even.\\
 However, we assumed that one of $a,b$ is odd, so contradiction occurs.(\contradiction)\\
 Hence, the assumption that $\sqrt{2}$ is rational is wrong, so $\sqrt{2}$ is irrational.
 \end{proof}
+
+\begin{nlemma}\label{Quot_Consistent}
+$$a,b \in \Q \implies a+b, a-b, ab \in \Q$$
+\end{nlemma}
+\begin{proof}
+Write $a = \frac{m}{n}$, $b = \frac{r}{s}$, with $m,n,r,s \in \Z$ annd $n,s \neq 0$\\
+We can deduce, $$a \pm b = \frac{ms \pm rn}{ns}$$
+Since $ms \pm rn \in \Z$ and $ns \neq 0$, therefore $a \pm b \in \Q$\\
+We cann also deduce, $$ab = \frac{mr}{ns}$$
+Since $mr \in \Z$ and $ns \neq 0$, therefore $ab \in \Q$\\
+\end{proof}
+
+\begin{ncor}\label{add_of_q_nq}
+$$a \in \Q, b \notin \Q \implies a + b \notin \Q$$
+\end{ncor}
+\begin{proof}
+Assume $a \in \Q, b \notin \Q$. And we also assume, $a + b \in \Q$ for contradiction.\\
+We know $b = (a + b) - a$, and $a+b, a \in \Q$ by assumption.\\
+By Lemma~\ref{Quot_Consistent}, $b \in \Q$.\\
+However, we assumed $b \in \Q$ at the beginning. (\contradiction)\\
+Hence, assumption $a + b \in \Q$ is false, so Corollary~\ref{add_of_q_nq} is proved.
+\end{proof}
+
+\begin{ncor}\label{inf_irr_num}
+There are infinitely many irrational numbers.
+\end{ncor}
+\begin{proof}
+There are infinitely many integers.
+Consider $n \in \Z$, $$a = n + \sqrt{2}$$
+$\sqrt{2}$ is irrational by Lemma~\ref{sqrt2_irr}, and $a \notin \Q$ by Corollary~\ref{add_of_q_nq}.\\
+Thus there are infinitely many $a$.\\
+Therefore, there are infinitely many irrational numbers.
+\end{proof}
+
+
 
 
 
