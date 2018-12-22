@@ -571,11 +571,74 @@ Thus there are infinitely many $a$.\\
 Therefore, there are infinitely many irrational numbers.
 \end{proof}
 
+\section{Real Numbers}
+Assume we have constructed the real numbers complete with $+, -, \times, \div$.\\
+We have also proved the facts that if $a,b,c \in \R$, then
+\begin{itemize}
+	\item $a + b = b + a$
+	\item $a(b+c) = ab + ac$
+	\item $1 \times a = a$
+	\item $0 \neq 1$
+	\item so on
+\end{itemize}
+Assume we have defined $<$ on the $\R$. It means if $a,b \in \R$, we have proposition $a < b$. Lets define four axioms.
+\begin{axiom}[A1]\label{A1}
+$\forall a, b, t \in \R, a < b \implies a + t < b + t$
+\end{axiom}
+\begin{axiom}[A2]\label{A2}
+$\forall a, b, c \in \R, a < b \land b < c \implies a < c$
+\end{axiom}
+\begin{axiom}[A3]\label{A3}
+$\forall a \in \R$, exactly one of $a<0, a=0, 0<a$ is true.
+\end{axiom}
+\begin{axiom}[A4]\label{A4}
+$\forall a, b \in \R, 0 < a \land 0 < b \implies 0 < ab$
+\end{axiom}
+\begin{notation}
+Note that $a > b$ is defined to be $b < a$.
+\end{notation}
 
+\begin{nlemma}\label{neg_ineq}
+$\forall a, b \in \R, a < b \implies -b < -a$
+\end{nlemma}
+\begin{proof}
+Assume we have $a < b$,\\
+Let $t = -a-b$,
+\[
+a < b \implies a + t < b + t \tag{A1}
+\]
+\[
+a - a - b < b - a - b
+\]
+\[
+\therefore -b < -a
+\]
+\end{proof}
+\begin{nlemma}
+$x < 0 \implies -x > 0$
+\end{nlemma}
+\begin{proof}
+Assume we have $x < 0$\\
+Let $a = x, b = 0$\\
+\[
+a < b \implies -b < -a \tag{Lemma~\ref{neg_ineq}}
+\]
+\[
+\therefore 0 < -x
+\]
+\end{proof}
+\begin{nlemma}
+$a \neq 0 \implies a^2 > 0$
+\end{nlemma}
+\begin{proof}
+Assume we have $a \neq 0$\\
+By A3, one of $a^2 < 0, a^2 = 0, 0 < a^2$ is true.\\
+Assume for contradiction that $a^2 = 0$.\\
+$$a \neq 0 \implies a^2 \neq 0$$
+Hence, contradiction occurs. (\contradiction)
+Assume for contradiction that $a^2 < 0$.\\
 
-
-
-
+\end{proof}
 
 
 
