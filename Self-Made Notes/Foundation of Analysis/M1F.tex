@@ -299,7 +299,6 @@ If $X$ and $Y$ are sets, then
 	X = Y \iff (X \subseteq Y \land Y \subseteq X)
 \]
 \end{thm}
-
 \begin{proof}
 From $X \subseteq Y$, we can deduce 
 \[
@@ -572,6 +571,7 @@ Therefore, there are infinitely many irrational numbers.
 \end{proof}
 
 \section{Real Numbers}
+\subsection{Introduction}
 Assume we have constructed the real numbers complete with $+, -, \times, \div$.\\
 We have also proved the facts that if $a,b,c \in \R$, then
 \begin{itemize}
@@ -598,6 +598,7 @@ $\forall a, b \in \R, 0 < a \land 0 < b \implies 0 < ab$
 Note that $a > b$ is defined to be $b < a$.
 \end{notation}
 
+\subsection{Some proves of Real Numbers}
 \begin{nlemma}\label{neg_ineq}
 $\forall a, b \in \R, a < b \implies -b < -a$
 \end{nlemma}
@@ -741,8 +742,110 @@ By A4, $0 < -x$ and $0 < -y$, we will have $$0 < (-x)(-y)$$
 $$xy > 0$$
 \end{proof}
 
+\section{Complex Number}
+\subsection{Introduction}
+In this chapter, it will record the definition of the complex numbers. The construct of complex numbers will not be recorded. And we will assume the facts of real numbers.
 
+\subsection{Definition}
+\begin{ndefi}[Complex number]
+A complex number is an ordered pair $(x,y)$ of real numbers.
+\end{ndefi}
+Ordered pair means ``$(a,b) \neq (b,a)$''.
 
+\begin{ndefi}[Map from $\R$ to $\C$]
+We identify the real number $r$ with the complex number $(r , 0)$.
+\end{ndefi}
+
+\begin{ndefi}[$i$]
+We define the complex number $i$ to be $(0, 1)$.
+\end{ndefi}
+
+\begin{ndefi}[Addition of $\C$]
+If $z = (u, v )$ and $w = (x, y)$ $\in \C$,
+$$z + w = ((u+x),(v+y))$$
+\end{ndefi}
+
+\begin{ndefi}[Multiplication of $\C$]
+If $z = (u, v )$ and $w = (x, y)$ $\in \C$,
+$$z \times w = zw = ((xu - yv), (xv + yu))$$
+\end{ndefi}
+
+\begin{ndefi}[Conjugate]
+The complex conjugate of a complex number $(x,y)$ is the complex number $(x,−y)$.
+\end{ndefi}
+
+\begin{ndefi}[Modulus]
+The modulus of a complex number $(x, y)$ is the real number $\sqrt{x^2 + y^2}$
+\end{ndefi}
+\begin{notation}
+The modulus of a complex number $z$ is defined to be $|z|$
+\end{notation}
+
+\begin{ndefi}[Argument]
+The argument of a complex number $z = (x, y)$ is the unique angle $\theta$, such that $\sin \theta = \frac{y}{|z|}$ and $\cos \theta = \frac{x}{|z|}$
+\end{ndefi}
+
+\section{Induction}
+\subsection{Introduction}
+The \emph{principle of mathematical induction} is a technique for proving \emph{infinitely} many propositions at once.
+\vspace{0.5cm}\\
+Assume that we know two things,
+\begin{itemize}
+	\item $P(1)$ is true.
+	\item For every positive integer d, we can deduce $P(d + 1)$ from $P(d)$.
+\end{itemize}
+
+\subsection{Proof}
+Assuming we have the two things above.\\
+Is it really that it can prove $P(n), \forall n \in \Z_{\geq 1}$?\\
+Here is a proof.
+\begin{proof}
+Let $S$ be a set that $S = \{n \in \Z_{\geq 1} \mid \lnot P(n)\}$.\\
+Assuming $S$ is non-empty.\\
+Let $e$ be the smallest element of $S$.\\
+We know that $e \neq 1$, since $P(1)$ is true.\\
+Let $e = d + 1$, and $d \in \Z_{\geq 1}$ $\because e \neq 1$\\
+Since $e$ is the smallest element of $S$, thereofore $P(d)$ is true.\\
+$\because P(d) \implies P(d+1)$, $\therefore P(d+1)$is true.\\
+Hence, $P(e)$ is true. However, $e$ should be in $S$, so $P(e)$ should be false.\\
+Hence, contradiction occurs. (\contradiction)\\
+Therefore, the assumption of $S$ is non-empty will be false. There does not exist a $n \in \Z_{\geq 1}$ such that $P(n)$ is false.\\
+We can then conclude that $P(n), \forall n \in \Z_{\geq 1}$.
+\end{proof}
+
+\subsection{Other induction}
+\begin{thm}[Induction of different base]
+If $k \in \Z$ is a fixed base, and $Q(m)$ are propositions for $m = k, k+1, k+2,...$ and:
+\begin{itemize}
+	\item $Q(k)$ is true
+	\item $Q(e) \implies Q(e+1)$, $\forall e \geq k$
+\end{itemize}
+then $Q(m)$ is true $\forall m \geq k$.
+\end{thm}
+
+\begin{thm}[Strong Induction]
+If $Q(m)$ are propositions for $m \in \Z_{\geq 1}$, and we know that:
+\begin{itemize}
+	\item $Q(1)$ is true.
+	\item $\forall d \in \Z_{\geq 1}$, $\bigwedge^{d}_{i = 1}Q(i) \implies Q(d+1)$.
+\end{itemize}
+then $Q(n)$ is true for all $n \geq 1$.
+\end{thm}
+\begin{proof}
+Let $P(n)$ be the proposition that $\bigwedge^{n}_{i = 1}Q(i)$.\\
+For $n=1$,\\
+$P(1) = Q(1)$ which is true.\\
+$\therefore P(1) is true$.\\
+Assume $P(k)$ is true, for $k \in \Z_{\geq 1}$, which means:\\
+$\bigwedge^{k}_{i = 1}Q(i)$ is true
+For $n = k+1$,\\
+$\because \bigwedge^{k}_{i = 1}Q(i) \implies Q(k+1)$\\
+$\therefore (\bigwedge^{k}_{i = 1}Q(i)) \land Q(k+1)$ is true.\\
+$\therefore \bigwedge^{k+1}_{i = 1}Q(i) = P(k+1)$ is true.\\
+By the principle of mathematical induction, $P(n)$ is true, $\forall n \in \Z_{\geq 1}$\\
+Since $P(n) \implies Q(n)$,\\
+Hence, we can conclude that $Q(m)$ is true, $\forall m \geq k$.
+\end{proof}
 
 
 
