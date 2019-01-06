@@ -13,14 +13,29 @@
 \maketitle
 {\small
   \noindent\textbf{M1F}\\
+  \noindent\textbf{Propositions, Sets and Numbers}\\
+  This chapter tells the basic mathematical logic and set theory. The proof examples are also very important.\\
+  \noindent\textbf{Real Numbers}\\
+  This chapter talks about the inequality of real numbers. It shows how the use of assumption in mathematics. The applying of assumption is the most important part in this chapter.\\
+  \noindent\textbf{Complex Numbers}\\
+  Similar to the real numbers chapter, but more assumptions.\\
+  \noindent\textbf{Induction}\\
+  This chapter is talking about different mathematical inductions, and how they actually works.\\
+  \noindent\textbf{Picking and Choosing}\\
+  A basic statistic chapter.\\
+  \noindent\textbf{Completeness of Real numbers}\\
+  It is really ann introduction of analysis course. It tells the concept of upper bound, epsilon delta proves, and the rigorous of maths.\\
+  \noindent\textbf{Number theory}\\
+  Very basic number theory. The most important part of solving the number theory questions are to find the divisors of both sides. And mostly, the number theory is considering the divisors. The Euclids algorithm to find $\lambda$ and $\mu$ are also worths to revise. And the Fermat's Last Theorem are also very important.\\
+  \noindent\textbf{Equivalence Relation}\\
+  Introducing the binary relation, equivalence relation, and the equivalence relation's relationship with set theory.\\
+  \noindent\textbf{Functions and Countability}\\
+  Introduce the injection, surjection and bijection. And the bijection between countably infinite sets are also very important. And the uncountable set of $\R$ is because of the uncountable infinite subset of $\Z_{\geq 1}$\\
 }
 
 \tableofcontents
 
-\setcounter{section}{-1}
-
-\section{Introduction}
-In this course...
+\setcounter{section}{0}
 
 \section{Propositions, Sets and Numbers}
 The propositions are like easy logic, and then a few sets and number concept will be discussed.
@@ -34,7 +49,7 @@ The propositions are like easy logic, and then a few sets and number concept wil
 	\begin{itemize}
 		\item $2 + 2 = 4$
 		\item $2 + 2 = 100000000$
-		\item Fermat's Last Theorm
+		\item Fermat's Last Theorem
 		\item Riemann Hypothesis
 	\end{itemize}
 \end{eg}
@@ -192,7 +207,7 @@ $\iff$ is the proposition version of $=$ for numbers. If $x$ and $y$ are equal n
 	\end{itemize}
 \end{eg}
 
-\subsection{Theorm of propositions}
+\subsection{Theorem of propositions}
 \begin{thm}[Relation of \emph{not, in} and \emph{or}]
 Let $P$ and $Q$ be propositions,
 $$(\lnot P) \lor (\lnot Q) \iff \lnot(P \land Q)$$
@@ -466,8 +481,8 @@ Let $X$ be the set of \emph{integers}, and we want to consider the subset of $X$
 $$\{ a \in X \mid a > 0\}$$
 The line in the middle is pronounced ``'such that". So the full statement can be read as ``the elements $a$ of $X$ such that $a > 0$".
 
-\subsection{Theorm of sets}
-\begin{thm}[A theorm of complement]
+\subsection{Theorem of sets}
+\begin{thm}[A theorem of complement]
 Let $X$ and $Y$ be sets.\\
 If $X, Y \subseteq \Omega$, $$(X \cup Y = \Omega) \land (X \cap Y = \varnothing) \implies X = Y^c$$
 \end{thm}
@@ -785,6 +800,32 @@ The modulus of a complex number $z$ is defined to be $|z|$
 The argument of a complex number $z = (x, y)$ is the unique angle $\theta$, such that $\sin \theta = \frac{y}{|z|}$ and $\cos \theta = \frac{x}{|z|}$
 \end{ndefi}
 
+\begin{ndefi}[cis]
+If $\theta \in \R$, then $cis(\theta) := \cos \theta + i \sin \theta$.
+\end{ndefi}
+
+\subsection{Theorem of Complex Numbers}
+\begin{nthm}[$|z| \in \R^+$]
+If $z$ is a non-zero complex number, then $|z| \in \R^+$.
+\end{nthm}
+
+\begin{nthm}[Multiplication of conjugate]
+If $z \in \C$, then $z\overline{z} = |z|^2$.
+\end{nthm}
+
+\begin{nthm}[Inverse]
+If $z \in \C$ is non-zero, then there exists $w \in \C$ such that $zw = 1$.
+\end{nthm}
+
+\begin{nthm}[De Moivre’s theorem]
+If $\theta, \phi \in \R$, then $cis(\theta + \phi) = cis(\theta)cis(\phi)$.
+\end{nthm}
+
+\begin{nthm}[Power of $\C$]
+If $n \in \Z_{\geq 1}$, then $cis(n\theta) = (cis(\theta))^n$
+\end{nthm}
+
+
 \section{Induction}
 \subsection{Introduction}
 The \emph{principle of mathematical induction} is a technique for proving \emph{infinitely} many propositions at once.
@@ -847,11 +888,514 @@ Since $P(n) \implies Q(n)$,\\
 Hence, we can conclude that $Q(m)$ is true, $\forall m \geq k$.
 \end{proof}
 
+\section{Picking and Choosing}
+\subsection{Introduction}
+There are ways to do counting. And here, some theorems of counting are recorded. However, proof is not provided.
 
+\subsection{Theorem}
+\begin{nthm}[Multiplication Principle]
+Let $P$ be process with $n$ steps, and suppose that for $1 \leq r \leq n$, the number of choices for the $r$th step is $a_r$, independent of which choices are made in the first $r - 1$ steps.\\
+Then the process can be done in $a_1a_2a_3 ... a_n$
+\end{nthm}
 
+\begin{nthm}[Size $n$ set ordering]
+There are $n!$ ways of linearly ordering a set of size $n$.
+\end{nthm}
 
+\begin{ndefi}[Binomial Coefficient]
+ If $r,n \in \Z_{\geq 0}$ with $0 \leq r \leq n$, define the binomial coefficient 􏰀$\binom{n}{r}$􏰁 to be the number of $r$-element subsets of a set of size $n$.
+\end{ndefi}
 
+\begin{nthm}[$\binom{n}{r}$􏰁]
+$$\binom{n}{r} = \frac{n!}{r!(n-r)!}$$
+\end{nthm}
 
+\begin{nthm}[Binomial Theorem]
+$$(a + b)^n = \sum^n_{r=0}\binom{n}{r}a^rb^{n-r}$$
+\end{nthm}
+
+\begin{ndefi}[Multinomial Coefficient]
+Say $n, d \in \Z_{\geq 0}$ and we have $d$ non-negative integers $r_1, r_2, r_3, ... , r_d$ with $r_1 +r_2 +···+r_d = n$. The multinomial coefficient􏰀 $\binom{n}{r_1, r_2, ..., r_d}$ 􏰁is defined to be the number of ways we can partition a set $S$ of size $n$ up into $d$ disjoint subsets $X_1$ of size $r_1$, $X_2$ of size $r_2$, ..., $X_d$ of size $r_d$.
+\end{ndefi}
+
+\begin{nthm}[$\binom{n}{r_1, r_2, ..., r_d}$]
+Say $n, d \in \Z_{\geq 0}$ and $r_1,r_2, ... ,r_d \Z_{\geq 0}$ satisfy $\sum^d_{i=1} r_i = n$.
+􏰌$$\binom{n}{r_1, r_2, ..., r_d} = \frac{n!}{r_1! r_2! ... r_d!}$$
+\end{nthm}
+
+\begin{nthm}[Multinomial Theorem]
+$$(a_1 + a_2 + a_3 + ... + a_d)^n = \sum \left( \binom{n}{r_1, r_2, ..., r_d}\prod^d_{i=1} a^{r_i}_i \right)$$
+\end{nthm}
+
+\section{Completeness of Real numbers}
+\subsection{Introduction}
+There is an axiom for the real numbers.
+\vspace{0.2cm}\\
+\textbf{Completeness axiom for the real numbers}:\\
+``Any non-empty set of real numbers which is bounded above, has a least upper bound''.
+
+This chapter will discuss the meaning of these words.\\
+
+\subsection{Definition}
+\begin{defi}
+Let $S \subseteq \R$,
+\begin{itemize}
+	\item We say a real number $b \in \R$ is an upper bound for $S$ if $\forall s \in S, s \leq b$.
+	\item We say $S$ is bounded above if there exists a real number $b \in \R$ which is an upper bound for $S$.
+\end{itemize}
+\end{defi}
+
+\begin{defi}
+Let $S \subseteq \R$ be a set of real numbers. We say that $l \in \R$ is a least upper bound for $S$ if it satisfies both of the following two properties:
+\begin{itemize}
+	\item $l$ is an upper bound for $S$.
+	\item If $b \in \R$ is any upper bound for $S$ then $l \leq b$.
+\end{itemize}
+\end{defi}
+
+\begin{eg}
+Find the least upper bound for $S = (0, 1)$.\\
+We can spot that $l = 1$ is an upper bound for $S$.\\
+Since $s \in S \implies s < 1 \implies s \leq 1$\\
+Let $b \in \R$ be any upper boundfor $S$, i.e $\forall s \in S, s \leq b$.\\
+Assume $b < l = 1$,\\
+Since $\frac{1}{2} \in S$, so $\frac{1}{2} \leq b$.\\
+Let $a$ be the average of $b$ and $1$, so $a = \frac{b+1}{2}$. Then,
+$$0 < \frac{1}{2} \leq b < \frac{b+1}{2} = a < 1$$
+Obviously, $a \in S$, since $0 < a < 1$.\\
+If $b$ is an upper bound of $S$, then $b \geq a$, but now $b < a$.\\
+Hence, contradiction occurs. (\contradiction)\\
+There does not exist an upper bound $b < l$.\\
+Hence, $l = 1$ is the least upper bound of $S$.
+\end{eg}
+
+\subsection{Theorem}
+\begin{nthm}
+Say $S \subseteq \R$, and $l_1, l_2$ are both least upper bounds for $S$.\\
+Then $l_1 = l_2$.
+\end{nthm}
+\begin{proof}
+By definition, $l_1, l_2$ are both upper bounds.\\
+By definition again, since $l_1$ is a least upper bound and $l_2$ is an upper bound, so it implies $l_1 \leq l_2$.\\
+Similarly, since $l_2$ is also least upper bound, so $l_2 \leq l_1$.\\
+With $l_1 \leq l_2$ and $l_2 \leq l_1$, $l_1 = l_2$
+\end{proof}
+
+\begin{eg}
+Show that $\R$ is not bounded above.\\
+Assume there exists $l$ is an upper bound of $\R$.\\
+By definition, $\forall r \in \R, r \leq l$ and $l \in \R$.\\
+Since $l + 1 \in \R$ as $l$ and $1$ are also real numbers.\\
+Therefore, $l+1 \leq l$.\\
+Obviously, $l+1 > l$. But now it shows that $l+1 \leq l$. Thus, contradiction occurs. (\contradiction)\\
+Hence, there does not exist upper bound for $\R$. Thus, $\R$ is not bounded above.
+\end{eg}
+
+\begin{nthm}
+If $S \subseteq \R$ is non-empty and bounded above, then $S$ has a supremum.
+\end{nthm}
+
+\begin{nthm}\label{There exist integer n > x}
+If $x \in \R$, then there is an integer $n$ with $n > x$.
+\end{nthm}
+\begin{proof}
+Assume for some $x \in \R$, there does not exist integer $n > x$.\\
+Then, $\forall n \in \Z, n \leq x$.\\
+Therefore $x$ would be an upper bound of $\Z$.\\
+Since $\Z$ is non-empty and bounded above, so there exists $\sup(\Z)$.\\
+Let $l = \sup(\Z)$.\\
+We know that $l - 1 < l$, so $l-1$ will not be an upper bound of $\Z$.\\
+If $l-1$ is not an upper bound of $\Z$, then there exists $n \in \Z, n > l-1$.\\
+Therefore, $n+1 > l$. However, $n+1 \in \Z$ and $l$ is an upper bound. Thus, $n+1 > l$ does not exist.\\
+Hence, contradiction occurs. (\contradiction)\\
+Thus, if $x \in \R$, then there is an integer $n$ with $n > x$.
+\end{proof}
+
+\begin{nthm}[Floor function]
+If $x \in \R$, there is a unique integer $n$ with $n \leq x < n+1$.
+\end{nthm}
+\begin{proof}
+Assume we have $x \in \R$,\\
+By Theorem~\ref{There exist integer n > x}, there exist integer $B$ that satisfy $B > x$, and there also exists integer $A$ that satisfy $A > -x$. Thus, $-A < x < B$.\\
+Consider the set of integers $i$, with $-A \leq i$ and $i \leq x$. (Let it be $I$)\\
+This set will be finite, since we know that $-A$ is in the set, but $B$ is not.\\
+Therefore, there must be a largest integer $n$ in the set $I$, and $n+1$ is not.\\
+Hence, there exists integer $n$ that satisfy $n \leq x < n+1$.
+\vspace{0.2cm}\\
+Assume the integer $n$ is not unique. There also exists $m$ that satisy $m \leq x < m+1$ and $n \neq m$.\\
+If $n \neq m$, then $n < m$ or $m < n$.\\
+If $n < m$, then $n+1 \leq m$. Thus, $$x < n+1 \leq m \leq x$$
+Hence, contradiction occurs. (\contradiction)\\
+Thus, $n < m$ is false. And similarly, $m < n$ is also false.\\
+Hence, the integer $n$ is unique.
+\end{proof}
+
+\begin{nthm}
+If $x < y$ are real numbers, then there is a rational number $q$ with $x < q < y$.
+\end{nthm}
+\begin{proof}
+If $x < y$, then $(y - x) > 0 \implies \frac{2}{y - x} > 0$.\\
+By Theorem~\ref{There exist integer n > x}, there exist integer $D$ such that $D > \frac{2}{y - x}$ and so, $(y - x) > \frac{2}{D}$.\\
+Set $N = \floor{Dy} - 1 < Dy$, so $\frac{N}{D} < y$.\\
+And $N + 2 = \floor{Dy} + 1 > Dy \implies N > Dy - 2$.\\
+$$x = y - (y - x) < y - \frac{2}{D} = \frac{Dy - 2}{D} < \frac{N}{D} < y$$
+Therefore, $\frac{N}{D}$ is a rational number that satisfy $x < q < y$.
+\end{proof}
+
+\begin{eg}
+There is a positive real number whose square is 2.
+\end{eg}
+\begin{proof}
+\begin{nlemma}\label{l2 > 2}
+Say $l \in \R_{\geq 1}$ and $l^2 > 2$.\\
+Then there exists $\epsilon > 0$ such that $l - \epsilon > 0$ and $(l - \epsilon)^2 > 2$.
+\end{nlemma}
+\begin{proof}
+Set $\delta = \frac{l^2 - 2}{2}$, so $l^2 > l^2 - \delta = \frac{l^2 + 2}{2} > 2$.\\
+Set $\epsilon = \min{\left\{\frac{\delta}{2l}, \frac{l}{2} \right\}}$.
+Thus, $\epsilon \leq \frac{l}{2} < l$, so $l - \epsilon > 0$.
+\begin{align*}
+	(l - \epsilon)^2 &= l^2 - 2l\epsilon + \epsilon^2 \\
+	&\geq l^2 - 2l\epsilon \\
+	&\geq l^2 - \delta > 2
+\end{align*}
+\end{proof}
+\begin{nlemma}\label{l2 < 2}
+Say $l \in \R_{\geq 1}$ and $l^2 < 2$.\\
+Then there exists $\epsilon > 0$ such that $l + \epsilon > 0$ and $(l + \epsilon)^2 < 2$.
+\end{nlemma}
+\begin{proof}
+Set $\delta = \frac{2 - l^2}{2}$, so $l^2 < l^2 + \delta = \frac{l^2 + 2}{2} < 2$.\\
+Set $\epsilon = \min{\left\{ \frac{\delta}{2}, \frac{\delta}{4l}, 1\right\}}$.
+\begin{align*}
+	0 < \epsilon \leq 1 &\implies \epsilon^2 < \epsilon \leq \frac{\delta}{2}\\
+	\epsilon \leq \frac{\delta}{4l} &\implies 2l\epsilon \leq \frac{\delta}{2}
+\end{align*}
+\begin{align*}
+	(l + \epsilon)^2 &= l^2 + 2l\epsilon + \epsilon^2 \\
+	&\leq l^2 + \frac{\delta}{2} + \frac{\delta}{2} \\
+	&= l^2 + \delta < 2
+\end{align*}
+\end{proof}
+Consider set $S = \{x \in \R | x^2 < 2\}$.\\
+Obviously, $S$ is non-empty, as $1 \in S$, since $1^2 = 1 < 2$.\\
+$S$ is also bounded above, as $10 \notin S$, since $10^2 = 100 > 2 > x^2$.\\
+Thus, $\forall s \in S, 10 \geq s$ is true, and so $S$ is bounded above.\\
+By the completness of $\R$, $S$ will have a least upper bound, say $l$.\\
+By the rule of inequlaity, one of $l^2 = 2$, $l^2 < 2$ and $l^2 > 2$ will be true.\\
+Assume $l^2 < 2$, by Lemma~\ref{l2 < 2}, there exist $x, \epsilon \in \R, x = l + \epsilon$ with $x^2 < 2$, so $x \in S$, $l$ will not be upper bound of $S$ as $x = l + \epsilon> l$. Thus, $l^2 < 2$ is false.\\
+Assume $l^2 > 2$, by Lemma~\ref{l2 > 2}, there exist $x, \epsilon \in \R, x = l - \epsilon$ with $x^2 > 2$, so $x$ will be an upper bound. Thus, $l$ will not be the least upper bound, as $x = l - \epsilon < l$. Thus, $l^2 > 2$ is false.\\
+Hence, $l^2 = 2$ will be true, since $l$ does exist.
+\end{proof}
+
+\section{Number theory}
+\subsection{Introduction}
+In this chapter, some basic number theory will be discussed.
+
+\subsection{Theorems and Definitions}
+\begin{lemma}
+Say $a \in Z$ and $b \in \Z_{\geq 1}$ are integers. Then,
+\begin{itemize}
+	\item We can write $a = qb + r$ with $q$ (“quotient”) an integer, and $r$ (“remainder”) an integer satisfying $0 \leq r < b$.
+	\item If $a = qb+r = \p{q} b + \p{r}$ with $q, \p{q} \in \Z$ and $0 \leq r,\p{r} < b$,then $q = \p{q}$ and $r = \p{r}$.
+\end{itemize}
+\end{lemma}
+\begin{proof}
+We have $b \geq 1$, so $b \neq 0$.\\
+Set $x = \frac{a}{b}$ and $q = \floor{x}$.\\
+Thus, $q \leq x < q + 1$, and so $qb \leq bx < b(q+1)$.
+$$qb \leq a < qb + b$$
+Hence, there must exist $r$ such that $a = qb + r$ and $0 \leq r < b$.
+\vspace{0.2cm}\\
+Say $a = qb+r = \p{q} b + \p{r}$ with $q, \p{q} \in \Z$ and $0 \leq r,\p{r} < b$.\\
+We can deduce $$b(q - \p{q}) = \p{r} - r$$
+Obviously, the left side will be a multiple of $b$ and hence it is either $0$ or has absolute value at least $b$.\\
+The right size is the difference of two elements of $[0, b)$, and hence the difference is in $(-b, b)$. Thus, it has an absolute value less than $b$.\\
+In order to make both sides equal, both sides must be zero.\\
+Hence, $\p{r} - r = 0 \implies \p{r} = r$ and $b(q - \p{q}) \implies \p{q} = q$ since $b \neq 0$.
+\end{proof}
+
+\begin{defi}
+If $a, b \in \Z$ then we say $a$ divides $b$ if there exists some $k \in \Z$ such that $b = ka$.
+\end{defi}
+\begin{notation}
+We say $a$ is a \emph{divisor} of $b$.\\
+We write $a \mid b$ for ``$a$ divides $b$''.
+\end{notation}
+
+\begin{thm}
+If $d,x,y \in \Z$ with $d \mid x$ and $d \mid y$, then $\forall \lambda, \mu \in \Z$ we also have $d \mid (\lambda x + \mu y)$.
+\end{thm}
+\begin{proof}
+By definition, we know that $d \mid x$ and $d \mid y$ can deduce there exists $k_1, k_2 \in \Z$ such that $x = k_1d$ and $y = k_2d$.
+\begin{align*}
+\lambda x + \mu y &= \lambda (k_1d) + \mu (k_2d)\\
+&= d(\lambda k_1) + d(\mu k_2)\\
+&= d(\lambda k_1 + \mu k_2)
+\end{align*}
+Since $\lambda k_1 + \mu k_2 \in \Z$, so $d \mid (\lambda x + \mu y)$.
+\end{proof}
+
+\begin{defi}
+$d \in \Z_{\geq 1}$ is the greatest common divisor of $a$ and $b$, if:
+\begin{itemize}
+	\item $d \mid a$ and $d \mid b$
+	\item If $e \in \Z_{\geq 1}$ satisfies $e \mid a$ and $e \mid b$, then $e \leq b$
+\end{itemize}
+\end{defi}
+
+\subsection{Euclid’s algorithm}
+We can use Euclid’s algorithm to deduce the $g.c.d$ (Greatest common divisor) of two positive integers $a$ annd $b$.
+
+Consider the sequences: $$r_n = \floor{\frac{r_n}{r_{n+1}}} . r_{n+1} + r_{n+2}$$
+By substituting $r_1 = a$ and $r_2 = b$, and work out the sequence $r$ until $r_{k+1} = 0$, then $r_{k}$ will be the $g.c.d(a,b)$.
+\begin{eg}
+Find the $g.c.d(54, 21)$.
+\begin{align*}
+r_{n+2} &= r_n - \floor{\frac{r_n}{r_{n+1}}} . r_{n+1}\\
+r_1 &= 54 \\
+r_2 &= 21 \\
+r_3 &= 54 - 2 \times 21 = 12 \\
+r_4 &= 21 - 1 \times 12 = 9 \\
+r_5 &= 12 - 1 \times 9 = 3 \\
+r_6 &= 9 - 3 \times 3 = 0
+\end{align*}
+Hence, $g.c.d(54, 21) = r_5 = 3$
+\end{eg}
+
+\begin{lemma}
+If Euclid’s algorithm applied to $a$ and $b$ returns the positive integer d, then $d \mid a$ and $d \mid b$.
+\end{lemma}
+\begin{proof}
+Let $d = r_n$.\\
+We know that $r_1 = a > r_2 = b > r_3 > ... > r_n = d > r_{n+1} = 0$.\\
+Let $P(j)$ be proposition that $\forall j < n, d \mid r_{n-j}$.\\
+When $j = 0$, $r_{n-0} = r_n = d$. Hence, $d \mid r_n$.\\
+$\therefore P(0)$ is true.\\
+When $j = 1$, $r_{n-1} = \floor{\frac{r_{n-1}}{r_n}}r_n + r_{n+1}$.\\
+Since $r_{n+1} = 0$ and $r_n = d$, so $$r_{n-1} = \floor{\frac{r_{n-1}}{r_n}}d$$
+Hence, $d \mid r_{n-1}$. $\therefore P(1)$ is true.\\
+Assume $P(k), P(k+1)$, i.e $d \mid r_{n-k}$ and $d \mid r_{n-(k+1)}$ are true.\\
+When $j = k+2$,$$r_{n-(k+2)} = \floor{\frac{r_{n-(k+2)}}{r_{n-(k+1)}}}r_{n-(k+1)} + r_{n-k}$$
+Therefore,for some $\lambda, \mu \in \Z$ $$r_{n-(k+2)} = \floor{\frac{r_{n-(k+2)}}{r_{n-(k+1)}}}(\lambda d) + \mu d$$
+Hence, $d \mid r_{n-(k+2)}$. Thus, $P(k+2)$ is true.\\
+By the principle of mathematical induction, $P(j)$ is true $\forall j \in \Z_{\leq 0}$ and $j < n$\\
+With $P(n-2)$ and $P(n-1)$, we can deduce that $d \mid r_{2}$ and $d \mid r_{1}$.\\
+Hence, $d \mid b$ and $d \mid a$.
+\end{proof}
+
+\begin{lemma}
+If Euclid’s algorithm applied to $a$ and $b$ returns the positive integer $d$, then for all divisors $e$ of $a$ and $b$, we have $e \mid d$.
+\end{lemma}
+\begin{proof}
+Let $P(j)$ be proposition that $e \mid r_j$, $\forall j \in \Z_{>0}$ and $j \leq N$.\\
+When $j=1$, $r_1 = a$. We are given that $e \mid a$, so $P(1)$ is true.\\
+When $j=2$, $r_2 = b$. We are given that $e \mid b$, so $P(2)$ is true.\\
+Assume $P(k), P(k+1)$ are true, i.e. $e \mid r_k$ and $e \mid r_{k+1}$ for some $k$.
+When $j=k+2$, $$r_{k+2} = r_k - \floor{\frac{r_k}{r_{k+1}}} . r_{k+1}$$
+Therefore,for some $\lambda, \mu \in \Z$ $$r_{k+2} = \lambda e - \floor{\frac{r_k}{r_{k+1}}} . \mu e$$
+Hence, $e \mid r_{k+2}$. $P(k+2)$ is true.\\
+By the principle of mathematical induction, $P(j)$ is true $\forall j \in \Z_{>0}$ and $j \leq N$\\
+With $P(n)$, we can deduce that $e \mid (r_n = d)$.
+\end{proof}
+
+\begin{thm}
+Euclid’s algorithm, applied to two positive integers $a$ and $b$, returns the $g.c.d(a, b)$.
+\end{thm}
+\begin{proof}
+Applying the previous two lemmas.
+\end{proof}
+
+\begin{thm}
+If $a$ and $b$ are positive integers, and if $d = g.c.d(a,b)$, then any common divisor $e$ of $a$ and $b$ divides $d$.
+\end{thm}
+\begin{proof}
+Applying the previous lemma and theorem.
+\end{proof}
+
+\begin{thm}
+If $a, b$ are positive integers, then there exists integers $\lambda$ and $\mu$ such that $\lambda a + \mu b = g.c.d(a, b)$.
+\end{thm}
+\begin{proof}
+Let $P(j)$ be proposition that there exist $\lambda_{j}a + \mu_{j}b = r_j$ for positive integer $j$, and $j \leq n$.\\
+When $j=1$, $r_1 = a$, therefore $r_1 = 1 \times a + 0 \times b$.\\
+$\therefore P(1)$ is true.\\
+When $j=2$, $r_2 = b$, therefore $r_2 = 0 \times a + 1 \times b$.\\
+$\therefore P(1)$ is true.\\
+Assume $P(k), P(k+1)$ are true, i.e there exists $\lambda_{k}, \lambda_{k+1}, \mu_{k}, \mu_{k+1}$ such that $\lambda_{k}a + \mu_{k}b = r_k$ and $\lambda_{k+1}a + \mu_{k+1}b = r_{k+1}$\\
+When $j=k+2$, $$r_{k+2} = r_k - \floor{\frac{r_k}{r_{k+1}}} . r_{k+1}$$
+Therefore, $$r_{k+2} = (\lambda_{k}a + \mu_{k}b) - \floor{\frac{r_k}{r_{k+1}}} . (\lambda_{k+1}a + \mu_{k+1}b = r_{k+1})$$
+Hence, $$r_{k+2} = (\lambda_{k} - \floor{\frac{r_k}{r_{k+1}}}\lambda_{k+1})a + (\mu_{k} - \floor{\frac{r_k}{r_{k+1}}}\mu_{k+1})b$$
+$\therefore P(k+2)$ is true.\\
+By the principle of mathematical induction, $P(j)$ is true for positive integer $j$, and $j \leq n$.\\
+With $P(n)$, there exist $\lambda_{n}, \mu_{n}$ such that $\lambda_{n}a + \mu_{n}b = r_n = d = g.c.d(a,b)$.
+\end{proof}
+
+\subsection{Factorization into primes}
+\begin{lemma}
+If $p$ is prime and $a \in \Z_{\geq 1}$, and if $p 􏰙\nmid a$, then $g.c.d(p, a) = 1$.
+\end{lemma}
+\begin{lemma}
+If $a,b,c \in \Z_{\geq 1}$ with $a \mid bc$ and $g.c.d(a,b) = 1$, then $a \mid c$.
+\end{lemma}
+\begin{thm}
+If $p, b, c \in \Z_{\geq 1}$ with $p$ prime, and if $p \mid bc$, then $p \mid b$ or $p \mid c$.
+\end{thm}
+\begin{thm}
+If $n \geq 1$ and $a_1, a_2, ..., a_n$ are all positive integers, with $p \mid \prod^n_{i=1}a_i$, then $p \mid a_j$ for some $j$ with $1 \leq j \leq n$.
+\end{thm}
+\begin{thm}
+Every positive integer is uniquely a product of prime numbers.
+\end{thm}
+\begin{thm}
+If $a, b, c, n \in \Z_{\geq 1}$ with $g.c.d(a, b) = 1$, and if $ab = c^n$, then both $a$ and $b$ are $n$th powers of positive integers.
+\end{thm}
+\begin{thm}
+If $a, n \in \Z_{\geq 1}$ and if there exists $b \in \Q_{>0}$ with $b^n =a$,then $b \in Z$.
+\end{thm}
+
+\subsection{Congruence}
+\begin{defi}
+$\forall a,b \in \Z, \forall m \in \Z_{\geq 1}$,
+$$a \equiv b \mod m \iff \exists\ k \in \Z, a - b = m \times k$$
+\end{defi}
+
+\begin{thm}
+Say $m \in \Z_{\geq 1}$ and $a, b, c \in \Z$
+\begin{itemize}
+	\item $a \equiv a \mod m$
+	\item If $a \equiv b \mod m$, then $b \equiv a \mod m$
+	\item If $a \equiv b \mod m$ and $b \equiv c \mod m$, then $a \equiv c \mod m$
+\end{itemize}
+\end{thm}
+
+\begin{thm}
+Say $m \in \Z_{\geq 1}$, $a, b, s, t \in \Z$, $a \equiv s \mod m$ and $b \equiv t \mod m$
+\begin{itemize}
+	\item $a+b \equiv s+t \mod m$
+	\item $a-b \equiv s-t \mod m$
+	\item $ab \equiv st \mod m$
+\end{itemize}
+\end{thm}
+
+\begin{thm}[Fermat's Little Theorem]
+If $a \in \Z$ and $p \in \Z_{>1}$ is a prime number, then
+\begin{itemize}
+	\item $a^p \equiv a \mod p$
+	\item if $p \nmid a$, then $a^{p-1} \equiv 1 \mod p$
+\end{itemize}
+\end{thm}
+
+\section{Equivalence Relation}
+\subsection{Binary Relation}
+\begin{defi}
+A binary relation on $S$ is a function, which takes as input an ordered pair of elements of $S$, and outputs either “true” or “false”.
+\end{defi}
+We can think it as a function to see if the ordered pair is in the relation subset. Say $R \subseteq S \times S$. If the pair is in $R$, then it outputs true, otherwise it outputs false.
+
+\subsection{Equivalence Relation}
+\begin{defi}
+Let $S$ be a set and let $\thicksim$ be a binary relation on $S$.
+\begin{itemize}
+	\item We say $\thicksim$ is reflexive if $\forall s \in S, s \thicksim s$.
+	\item We say $\thicksim$ is symmetric if $\forall s,t \in S, s \thicksim t \implies t \thicksim s$.
+	\item We say $\thicksim$ is transitive if $\forall s,t,u \in S, s \thicksim t \land t \thicksim u \implies s \thicksim u$.
+\end{itemize}
+\end{defi}
+
+\begin{defi}[Partition]
+A partition of a set $S$ is: an index set $I$, and non-empty subsets $C_i$ of $S$ for every $i \in I$, with the property that $i \neq j \implies C_i \cap C_j = \varnothing$, and 􏰛$\bigcup_{i \in I}C_i = S$.
+\end{defi}
+
+\begin{defi}[Equivalence Class]
+Let $S$ be a set and let $\thicksim$ be an equivalence relation on $S$. Let $a \in S$ be an element. The equivalence class $Cl(a)$ of $a$ is the following subset of S:
+$$Cl(a) := \{\ b \in S \mid a \thicksim b\ \}$$
+\end{defi}
+\begin{notation}
+$[a]_{\thicksim}$ is another representation of $Cl(a)$.
+\end{notation}
+
+\begin{lemma}
+Say $\thicksim$ is an equivalence relation on S, and $a, b \in S$. If $a \thicksim b$ then $Cl(b) \subseteq Cl(a)$.
+\end{lemma}
+\begin{cor}
+Say $\thicksim$ is an equivalence relation on S, and $a, b \in S$. If $a \thicksim b$ then $Cl(b) = Cl(a)$.
+\end{cor}
+
+\begin{prop}
+If $a, b \in S$ then either $Cl(a) = Cl(b)$, or $Cl(a) \cap Cl(b) = \varnothing$.
+\end{prop}
+
+\begin{thm}
+Let $S$ be a set.
+\begin{itemize}
+	\item If $\thicksim$ is an equivalence relation on $S$, and $P$ is the partition of $S$ corresponding to equivalence classes for $\thicksim$, then the equivalence relation associated to $P$ is the same as $\thicksim$.
+	\item If $P$ is a partition of $S$, and $\thicksim$ is the associated equivalence relation, then the equivalence classes for $\thicksim$ are equal to the parts of $P$.
+\end{itemize}
+\end{thm}
+
+\section{Functions and Countability}
+\begin{defi}
+Here are the definitions of injection, surjection and bijection.
+\begin{itemize}
+	\item We say $f$ is injective, or an injection, if $\forall a,b \in X, f(a) = f(b) \implies a = b$.
+	\item We say $f$ is surjective, or a surjection, if $f(X) = Y$, or equivalently if $\forall y \in Y, \exists \ x \in X, f(x) = y$.
+	\item We say f is bijective, or a bijection, if it is both injective and surjective.
+\end{itemize}
+\end{defi}
+
+\begin{defi}
+Say $f : X \to Y$ is a function. We say that a function $g : Y \to X$ is a two-sided inverse for $f$ if the composite function $g \circ f : X \to X$ is the identity function, and also the composite function $f \circ g : Y \to Y$ is the identity function.
+\end{defi}
+
+\begin{thm}
+Say $X$ and $Y$ are sets, and $f :X \to Y$ is a function. Then $f$ is a bijection if and only if $f$ has a two-sided inverse $g:Y \to X$.
+\end{thm}
+
+Now say $X$ and $Y$ and $Z$ are three sets, and $f : X \to Y$ and $g : Y \to Z$ are functions. Recall that in this situation we can define $h := g \circ f$, so $h : X \to Z$.
+
+\begin{thm}
+Some properties of composite function.
+\begin{itemize}
+	\item If $f$ and $g$ are both injections, then $h$ is an injection.
+	\item If $f$ and $g$ are both surjections, then $h$ is a surjection.
+	\item If $f$ and $g$ are both bijections, then $h$ is a bijection.
+\end{itemize}
+\end{thm}
+
+\begin{defi}
+$X \leftrightarrow Y$ means that there exists a bijection $f : X \to Y$.
+\end{defi}
+
+\begin{defi}
+If a set bijects with $\{1, 2, 3, ... , n\}$ we define its cardinality to be $n$.
+\end{defi}
+
+\begin{thm}
+If $X$ and $Y$ are finite sets, then $X \leftrightarrow Y$ if and only if $X$ and $Y$ have the same cardinality.
+\end{thm}
+
+\begin{defi}
+Let $X$ be a set. By an infinite sequence $x_1,x_2,...,x_n,...$ of elements of $X$, or more precisely an infinite sequence indexed by $\Z_{\geq 1}$, I just mean a map $\Z_{\geq 1} \to X$, where the notation we use for the map is $d 􏰜\mapsto x_d$ .
+\end{defi}
+
+\begin{defi}
+A set is \emph{countably infinite} if it bijects with $\Z_{\geq 1}$.
+\end{defi}
+
+\begin{defi}
+If $X$ and $Y$ are sets, then the product $X \times Y$ of $X$ and $Y$ is defined to be the set of ordered pairs $(x,y)$ with $x \in X$ and $y \in Y$.
+\end{defi}
+
+\begin{prop}
+$\Q$ is countably infinite.
+\end{prop}
+We can say $Z_{\geq 1} \leftrightarrow Z_{\geq 0} \leftrightarrow Z \leftrightarrow Q$.
+
+\begin{prop}
+$\R$ is uncountably infinte.
+\end{prop}
+This is because there is an injection from the set of subsets of $\Z_{\geq 1}$. However, the the set of all subsets of $\Z_{\geq 1}$ is not countably infinte.
 
 
 
