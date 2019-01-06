@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.19)  6 JAN 2019 00:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.11.19)  6 JAN 2019 00:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1632,9 +1632,6 @@ Underfull \hbox (badness 10000) in paragraph at lines 637--639
 
 [14] [15] [16] [17]
 Missing character: There is no â in font cmr10!
-Missing character: There is no ˆ in font cmr10!
-Missing character: There is no ’ in font cmr10!
-Missing character: There is no â in font cmr10!
 Missing character: There is no € in font cmr10!
 Missing character: There is no ™ in font cmr10!
  [18] [19] [20]
@@ -1755,8 +1752,8 @@ Package rerunfilecheck Info: File `M1F.out' has not changed.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 1413.
  ) 
 Here is how much of TeX's memory you used:
- 47079 strings out of 492995
- 1054675 string characters out of 6132703
+ 47078 strings out of 492995
+ 1054667 string characters out of 6132703
  1291176 words of memory out of 5000000
  49599 multiletter control sequences out of 15000+600000
  21591 words of font info for 129 fonts, out of 8000000 for 9000
@@ -1786,10 +1783,10 @@ nts/type1/public/amsfonts/cm/cmti10.pfb></usr/local/texlive/2017/texmf-dist/fon
 ts/type1/public/amsfonts/symbols/msam10.pfb></usr/local/texlive/2017/texmf-dist
 /fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/local/texlive/2017/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
-Output written on M1F.pdf (30 pages, 355092 bytes).
+Output written on M1F.pdf (30 pages, 355096 bytes).
 PDF statistics:
- 608 PDF objects out of 1000 (max. 8388607)
- 530 compressed objects within 6 object streams
- 139 named destinations out of 1000 (max. 500000)
+ 606 PDF objects out of 1000 (max. 8388607)
+ 528 compressed objects within 6 object streams
+ 138 named destinations out of 1000 (max. 500000)
  28645 words of extra memory for PDF output out of 29859 (max. 10000000)
 
